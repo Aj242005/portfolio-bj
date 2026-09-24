@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #1a1410;
+    color: #e8dcc8;
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+    user-select: none;
+    -webkit-user-select: none;
+    overflow: hidden;
+  }
+
+  .font-display {
+    font-family: 'Special Elite', 'Courier New', cursive;
+  }
+
+  .font-mono {
+    font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  }
+}
+
+/* Vintage warm scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1a1410;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 168, 83, 0.4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 168, 83, 0.7);
+}
+
+/* Subtle paper grain texture for cards */
+.vintage-card {
+  background: #2a2118;
+  border: 1px solid #3a2f22;
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(212, 168, 83, 0.05);
+}
+
+/* Warm glow effect for active elements */
+.warm-glow {
+  box-shadow: 0 0 20px rgba(212, 168, 83, 0.15);
+}
+
+/* Hide scrollbar but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Range slider custom styling for retro theme */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #2a2118;
+  border-radius: 4px;
+  height: 8px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #d4a853;
+  border: 2px solid #b8975a;
+  cursor: grab;
+  box-shadow: 0 0 8px rgba(212, 168, 83, 0.4);
+}
+
+input[type="range"]::-webkit-slider-thumb:active {
+  cursor: grabbing;
+  background: #c47832;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #d4a853;
+  border: 2px solid #b8975a;
+  cursor: grab;
+  box-shadow: 0 0 8px rgba(212, 168, 83, 0.4);
+}
