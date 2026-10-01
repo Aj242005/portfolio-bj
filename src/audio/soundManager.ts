@@ -27,7 +27,11 @@ class SoundManager {
     if (!this.ctx) {
       const AudioCtxClass = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
       if (!AudioCtxClass) return false;
-      this.ctx = new AudioCtxClass();
+      try {
+        this.ctx = new AudioCtxClass();
+      } catch {
+        return false;
+      }
 
       this.masterGain = this.ctx.createGain();
       this.masterGain.gain.setValueAtTime(this.isMuted ? 0 : 0.4, this.ctx.currentTime);
@@ -37,7 +41,7 @@ class SoundManager {
     }
 
     if (this.ctx.state === 'suspended') {
-      this.ctx.resume();
+      void this.ctx.resume().catch(() => {});
     }
 
     return true;
@@ -100,6 +104,7 @@ class SoundManager {
 
   public setMuted(muted: boolean) {
     this.isMuted = muted;
+    if (!muted) this.initContext();
     if (this.ctx && this.masterGain) {
       const now = this.ctx.currentTime;
       this.masterGain.gain.cancelScheduledValues(now);
