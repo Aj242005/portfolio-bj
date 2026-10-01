@@ -69,8 +69,8 @@ export default function App() {
           <div className="scene-shade" aria-hidden="true" />
           <div className="profile-intro">
             <h1>Building trust.<br /><span>Beyond the<br />noise.</span></h1>
-            <p className="profile-role">Backend &amp; Blockchain Engineer</p>
-            <p className="profile-description">From zero-knowledge proofs to quantum-resistant networks. I build the systems you can trust.</p>
+            <p className="profile-role">Research Associate · Cryptography @ Namo Labs</p>
+            <p className="profile-description">I build verifiable systems: ZK proofs, quantum-resistant networks, and Rust infrastructure. Published researcher. Founder of AlterBlock.</p>
             <div className="specialisms"><span>Applied cryptography</span><span>Distributed systems</span><span>Zero-knowledge proofs</span></div>
             <a className="text-link explore-link" href="#signal-index">Explore my signals <ArrowDown size={16} /></a>
           </div>
@@ -79,7 +79,7 @@ export default function App() {
           <StationCard />
         </section>
         <section className="receiver" aria-label="Frequency tuner">
-          <div className="receiver-heading"><Radio size={19} /><div><h2>Find your frequency.</h2><p>Eight signals. One engineering journey.</p></div></div>
+          <div className="receiver-heading"><Radio size={19} /><div><h2>Find your frequency.</h2><p>{STATIONS.length} signals. One engineering journey.</p></div></div>
           <div className="tuning-control">
             <div className="tuning-scale" aria-hidden="true"><span>88</span><span>92</span><span>96</span><span>100</span><span>104</span><span>108 MHz</span></div>
             <div className="frequency-track">

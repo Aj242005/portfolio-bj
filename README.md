@@ -1,6 +1,6 @@
-﻿# The Signal — Cryptographic Observatory
+# The Signal — Cryptographic Observatory
 
-Bhavya Jain’s interactive 3D engineering portfolio. Eight connected signals represent his backend, blockchain, applied cryptography, zero-knowledge, and peer-to-peer work.
+Bhavya Jain’s interactive 3D engineering portfolio. Ten connected signals represent his backend, blockchain, applied cryptography, zero-knowledge, and peer-to-peer work.
 
 A procedural resonator brings the radio roots into a new visual world: a suspended proof core, machined orbital rings, a frequency rail, and connected project nodes. Selecting a signal updates its lighting, carrier path, tuning readout, and original engineering dossier. Desktop and mobile both render real WebGL.
 
@@ -19,13 +19,13 @@ npm run preview
 npm test
 ```
 
-The production build is written to `dist`. The Playwright checks cover all eight signals, keyboard tuning, narrow layouts, sound and motion controls, dialog behavior, the résumé, reduced motion, and WebGL fallback. Install Chromium with `npx playwright install chromium` if it is not already available.
+The production build is written to `dist`. The Playwright checks cover all ten signals, keyboard tuning, narrow layouts, sound and motion controls, dialog behavior, the résumé, reduced motion, and WebGL fallback. Install Chromium with `npx playwright install chromium` if it is not already available.
 
 ## Interactions
 
 - Drag the 3D exhibit to orbit freely through unlimited 360° rotations in either direction; select a project node to tune to it.
 - Select a station in the signal index or use the frequency slider, including keyboard arrow, Home, and End controls.
-- Use previous/next to move through all eight signals.
+- Use previous/next to move through all ten signals.
 - Sound is muted initially; enable it in the header.
 - Pause motion in the header. System reduced-motion preferences are respected.
 - The résumé is always accessible at `/resume.html`, without JavaScript or WebGL.

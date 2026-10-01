@@ -2,10 +2,8 @@ import { Station } from '../types/station';
 
 /**
  * Single source of truth for Bhavya Jain's portfolio stations.
- * Each station represents a transmission beacon — a vintage radio tower
- * scattered in the dark landscape around the radio.
- * 
- * Accent colors updated for warm retro radio palette.
+ * Latest additions and corrections: supplied LinkedIn profile, Profile (9).pdf.
+ * Earlier engineering projects remain available unless the new profile replaces a fact.
  */
 export const STATIONS: Station[] = [
   {
@@ -16,13 +14,13 @@ export const STATIONS: Station[] = [
     role: 'Backend Developer',
     organization: 'System Prototyping DAO',
     period: 'May 2026 – Present',
-    location: 'Remote',
+    location: 'New Delhi',
     category: 'experience',
     accentColor: '#d4a853', // Warm Amber
     position3D: [-14, 2.5, -20],
     towerScale: 1.1,
     description:
-      'Backend-engineering the Credit → Karma → KAT tokenomics pipeline (NestJS/Node.js, MySQL, JWT/bcrypt RBAC) for a multi-tenant DAO platform; built the immutable Credit ledger with period-cap enforcement, the three-tier KAT settlement cap cascade, and an OpenAI GPT-4o-mini-backed weekly reporting pipeline.',
+      'Building the Credit → Karma → KAT tokenomics backend for a multi-tenant DAO platform: an immutable Credit ledger with period-cap enforcement, a three-tier settlement cap cascade (per-rule → per-contributor → DAO-wide), and an OpenAI GPT-4o-mini-backed weekly reporting pipeline.',
     tech: ['NestJS', 'Node.js', 'MySQL', 'JWT/bcrypt RBAC', 'OpenAI GPT-4o-mini', 'DAO Tokenomics'],
     metrics: [
       { label: 'Ledger', value: 'Immutable Credit' },
@@ -31,21 +29,41 @@ export const STATIONS: Station[] = [
     ]
   },
   {
+    id: 'namo-labs',
+    frequency: 89.8,
+    callsign: 'NAMO-PQC',
+    title: 'Namo Labs — Post-Quantum Migration',
+    role: 'Research Associate — Cryptography',
+    organization: 'Namo Labs',
+    period: 'August 2026 – Present',
+    location: 'New Delhi',
+    category: 'research',
+    accentColor: '#7ab648',
+    position3D: [-11, 3, -23],
+    description: 'Researching post-quantum cryptography migration for Namo Labs products. Evaluating candidate PQC protocols and proposing protocol-by-protocol replacements for classical cryptographic standards ahead of the quantum threat.',
+    tech: ['Post-Quantum Cryptography', 'Protocol Evaluation', 'PQC Migration', 'Cryptographic Standards'],
+    metrics: [
+      { label: 'Focus', value: 'PQC Migration' },
+      { label: 'Approach', value: 'Protocol-by-Protocol' },
+      { label: 'Role', value: 'Research Associate' }
+    ]
+  },
+  {
     id: 'digital-south-trust',
     frequency: 91.2,
     callsign: 'DST-CERT',
     title: 'Digital South Trust',
-    role: 'Software Engineer Intern — Emerging Technologies',
+    role: 'Blockchain Intern',
     organization: 'Digital South Trust',
     period: 'March – July 2026',
-    location: 'Remote',
+    location: 'New Delhi',
     category: 'experience',
     accentColor: '#7ab648', // Warm Green (dial eye tube)
     position3D: [-8, 4.0, -28],
     towerScale: 1.25,
     description:
-      'Architected a multi-tenant Certificate SaaS (Next.js, MongoDB Atlas, Stripe/Razorpay) and a Polygon certificate issuance pipeline via ethers.js anchoring hashes on-chain via Solidity smart contract (Amoy testnet) with idempotent retry and public on-chain verification.',
-    tech: ['Next.js', 'MongoDB Atlas', 'Stripe', 'Razorpay', 'Polygon (Amoy)', 'ethers.js', 'Solidity'],
+      'Architected a Certificate SaaS with org-scoped data isolation, OTP email authentication, and Stripe/Razorpay billing with plan-level quota enforcement. Designed a Polygon issuance pipeline anchoring certificate hashes and metadata URIs on Amoy through a Solidity contract, with idempotent retries and public verification.',
+    tech: ['Next.js App Router', 'MongoDB Atlas', 'Mongoose', 'OTP Authentication', 'Stripe', 'Razorpay', 'Polygon (Amoy)', 'ethers.js', 'Solidity'],
     metrics: [
       { label: 'Network', value: 'Polygon Amoy Testnet' },
       { label: 'Verification', value: 'Public On-Chain' },
@@ -57,10 +75,10 @@ export const STATIONS: Station[] = [
     frequency: 94.0,
     callsign: 'LOKA-ZKP',
     title: 'Lokachakra',
-    role: 'Software Engineer Intern — Backend & Cryptography',
+    role: 'Blockchain and ZKP Intern',
     organization: 'Lokachakra (UK-based startup)',
     period: 'June – Aug 2025',
-    location: 'Remote',
+    location: 'New Delhi',
     category: 'experience',
     accentColor: '#c47832', // Warm Orange
     position3D: [-2.5, 1.2, -18],
@@ -84,6 +102,7 @@ export const STATIONS: Station[] = [
     period: 'Jan – May 2025',
     location: 'Remote',
     category: 'research',
+    caseStudyUrl: 'https://ssrn.com/abstract=5286065',
     accentColor: '#7ab648', // Warm Green
     position3D: [5.5, 3.8, -24],
     towerScale: 1.2,
@@ -101,7 +120,7 @@ export const STATIONS: Station[] = [
     frequency: 99.6,
     callsign: 'DCOMM-P2P',
     title: 'Decomm — Quantum-Resistant P2P Infrastructure',
-    role: 'AlterBlock Project',
+    role: 'Founder, AlterBlock / Project Builder',
     organization: 'AlterBlock',
     period: '2025 – 2026',
     location: 'Open Source',
@@ -110,7 +129,7 @@ export const STATIONS: Station[] = [
     position3D: [12.5, 1.8, -19],
     towerScale: 1.15,
     description:
-      'Sovereign P2P node with a two-phase ML-KEM-1024 post-quantum key encapsulation handshake establishing per-session AES-256-GCM channels; RISC Zero zkVM ZK Merkle membership proving against a Solana-anchored root; security audit surfaced and patched two critical verifier-bypass vulnerabilities.',
+      'Built sovereign P2P communication in Rust with ML-KEM-1024 key exchange and per-session AES-256-GCM channels. RISC Zero zkVM Merkle proofs are anchored to Solana and validated end-to-end with real 244 KB STARK receipts. A self-run security audit found and patched two critical verifier-bypass bugs. Founder of AlterBlock.',
     tech: ['Rust', 'libp2p Gossipsub', 'ML-KEM-1024', 'RISC Zero zkVM', 'AES-256-GCM', 'Solana'],
     metrics: [
       { label: 'Handshake', value: '2-Phase ML-KEM-1024' },
@@ -141,6 +160,27 @@ export const STATIONS: Station[] = [
     ]
   },
   {
+    id: 'codit',
+    frequency: 103.8,
+    callsign: 'CODIT-AUDIT',
+    title: 'CODIT — Autonomous Codebase Audits',
+    role: 'Independent Project',
+    organization: 'CODIT',
+    period: 'Project',
+    location: 'coditt.xyz',
+    category: 'project',
+    accentColor: '#c47832',
+    position3D: [11, 3, -26],
+    caseStudyUrl: 'https://coditt.xyz/',
+    description: 'Built an autonomous codebase audit platform that combines Tree-sitter static analysis with machine-learning defect-risk scoring. SHAP explanations make each risk assessment interpretable, connecting code structure to understandable audit findings.',
+    tech: ['Tree-sitter', 'Static Analysis', 'Machine Learning', 'Defect-Risk Scoring', 'SHAP'],
+    metrics: [
+      { label: 'Analysis', value: 'Tree-sitter' },
+      { label: 'Scoring', value: 'ML Defect Risk' },
+      { label: 'Explanations', value: 'SHAP' }
+    ]
+  },
+  {
     id: 'zk-vault',
     frequency: 105.2,
     callsign: 'ZK-VAULT',
@@ -167,26 +207,35 @@ export const STATIONS: Station[] = [
     frequency: 108.0,
     callsign: 'ORIGIN-SYS',
     title: 'Origin — Education, Publications & Honors',
-    role: 'B.Tech CS / Researcher / Hackathons',
+    role: 'Final-year B.Tech CSE / Published Researcher',
     organization: 'B.M. Institute of Engineering and Technology',
     period: '2023 – 2027',
-    location: 'New Delhi / Remote',
+    location: 'Greater Delhi Area',
     category: 'origin',
     accentColor: '#d4a853', // Warm Amber
     position3D: [0, 5.2, -32],
     towerScale: 1.4,
     description:
-      'B.Tech Computer Science, B.M. Institute of Engineering and Technology (2023–2027). Publication: "Post-Quantum Cryptography: Preparing for the Quantum Threat," G-CARED 2025 (international conference) — hybrid PQC migration strategies against Shor\'s/Grover\'s algorithms, benchmarked NIST PQC finalists. Semi-Finalist, Algorand Hackathon (Shakti — ZKP-enabled AI agent payment protocol). Participant, Stacks Bitcoin Framework Hacker House, Goa.',
+      'Final-year B.Tech Computer Science and Engineering at BMIET, CGPA 9.00/10. Published "Post-Quantum Cryptography: Preparing for the Quantum Threat" at G-CARED 2025 (SSRN 5286065). Algorand Hackathon semi-finalist with Shakti, a ZKP-enabled AI agent payment protocol; Stacks Bitcoin Hacker House participant, Goa; Internal SIH Round Qualifier Team. Previously studied PCM at St. Andrews Scots Sr. Sec. School (April 2022–May 2023). Seeking internships and early-career roles in zkVMs, proof markets, ZK identity, and PQC migration.',
     tech: [
-      'B.Tech CS (2023–2027)',
+      'B.Tech CSE (2023–2027)',
+      'CGPA 9.00/10',
       'G-CARED 2025 Publication',
       'Algorand Hackathon Semi-Finalist',
-      'Stacks Hacker House Goa'
+      'Stacks Hacker House Goa',
+      'Internal SIH Round Qualifier Team'
     ],
     metrics: [
       { label: 'Degree', value: 'B.Tech CS (2023–2027)' },
-      { label: 'Paper', value: 'G-CARED 2025 PQC' },
+      { label: 'CGPA', value: '9.00/10' },
       { label: 'Hackathon', value: 'Algorand Semi-Finalist' }
+    ],
+    links: [
+      { label: 'Email Bhavya', url: 'mailto:jbhavya876@gmail.com' },
+      { label: 'LinkedIn profile', url: 'https://www.linkedin.com/in/bhavya-jain-394484284' },
+      { label: 'PQC publication · SSRN 5286065', url: 'https://ssrn.com/abstract=5286065' },
+      { label: 'Personal website', url: 'https://bhavya-os.vercel.app/' },
+      { label: 'Call · 9350807198', url: 'tel:+919350807198' }
     ]
   }
 ];

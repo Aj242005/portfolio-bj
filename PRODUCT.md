@@ -1,4 +1,4 @@
-﻿# Product
+# Product
 
 <!-- impeccable:product-schema 1 -->
 
@@ -20,7 +20,7 @@ Present the candidate’s supplied engineering evidence through an appealing and
 
 ## Positioning
 
-The Signal — Cryptographic Observatory. Eight frequencies connect the candidate’s experience, research, projects, and education around a procedural 3D resonator. The user selected this replacement world, preserving radio roots while explicitly moving beyond the old vintage receiver.
+The Signal — Cryptographic Observatory. Ten frequencies connect the candidate’s experience, research, projects, and education around a procedural 3D resonator. The user selected this replacement world, preserving radio roots while explicitly moving beyond the old vintage receiver.
 
 ## Operating Context
 
@@ -28,7 +28,7 @@ Desktop and mobile browsers. Both receive real 3D rendering; a usable content an
 
 ## Capabilities and Constraints
 
-- Eight supplied stations from 88.5 to 108 MHz, selectable through 3D nodes, native range input, previous/next buttons, and signal index.
+- Ten supplied stations from 88.5 to 108 MHz, selectable through 3D nodes, native range input, previous/next buttons, and signal index.
 - Suspended proof core, orbital rings, frequency-reactive geometry, connected nodes, and animated active carrier path.
 - Readable dossiers preserve original organizations, roles, dates, locations, descriptions, technologies, and metrics.
 - A résumé link is visible from the first frame, independent of scene loading.
@@ -37,11 +37,11 @@ Desktop and mobile browsers. Both receive real 3D rendering; a usable content an
 
 ## Brand Commitments
 
-Name: Bhavya Jain. Role: Backend & Blockchain Engineer. Specialisms: applied cryptography, zero-knowledge proofs, distributed systems, and P2P systems. User chose the Cryptographic Observatory direction for a complete visual and conceptual revamp with roots in radio signals. The finished visual language lives in DESIGN.md.
+Name: Bhavya Jain. Current role: Research Associate — Cryptography at Namo Labs. Founder of AlterBlock; Backend & Blockchain Engineer. Specialisms: applied cryptography, zero-knowledge proofs, distributed systems, and P2P systems. User chose the Cryptographic Observatory direction for a complete visual and conceptual revamp with roots in radio signals. The finished visual language lives in DESIGN.md.
 
 ## Evidence on Hand
 
-Source: src/data/stations.ts and public/resume.html.
+Source: supplied Profile (9).pdf, src/data/stations.ts and public/resume.html. Latest profile update is recorded in PROFILE_UPDATE.md.
 
 1. Kambria — KAT Tokenomics (System Prototyping DAO, May 2026–Present).
 2. Digital South Trust (March–July 2026).
@@ -51,6 +51,11 @@ Source: src/data/stations.ts and public/resume.html.
 6. TRIAD — AI market microstructure engine.
 7. ZK Proof-of-Reserves Vault — ERC-4626 yield.
 8. Origin — education, G-CARED 2025 publication, and hackathon honors.
+
+9. Namo Labs — Research Associate, Cryptography (August 2026–Present, New Delhi).
+10. CODIT — autonomous codebase audit platform (Tree-sitter, ML defect-risk scoring, SHAP).
+
+Latest profile also supplies contact links, 9.00/10 CGPA, SSRN 5286065, school education, SIH qualification, and stated early-career interests.
 
 ## Product Principles
 

@@ -1,4 +1,4 @@
-﻿---
+---
 name: "The Signal — Cryptographic Observatory"
 description: "A nocturnal instrument for exploring Bhavya Jain's engineering evidence."
 colors:
@@ -96,7 +96,7 @@ The apparatus is the expressive artifact; surrounding typography makes the evide
 
 **Key Characteristics:**
 
-- Procedural orbital geometry, faceted core, and eight connected signal nodes.
+- Procedural orbital geometry, faceted core, and ten connected signal nodes.
 - Mineral green surfaces with mint illumination and copper frequency feedback.
 - Condensed display lettering paired with readable humanist text.
 - Ruled evidence panels and restrained controls.
@@ -138,8 +138,8 @@ The narrow display face has the character of instrument lettering. Manrope gives
 ### Hierarchy
 
 - **Display:** the profile statement uses the frontmatter display role. It changes to 62px on intermediate screens, 66px on mobile, 58px below 370px, and 88px on wide screens. Mobile line-height is .98.
-- **Headline:** dossier titles use the headline role, increasing to 32px on mobile. Receiver headings use Barlow Condensed at 24px and weight 500.
-- **Title / measurement:** the receiver frequency uses the title role with tabular numerals; it becomes 30px on mobile. Dossier frequency uses 28px and weight 500.
+- **Headline:** dossier titles use the headline role, increasing to 32px on mobile. Receiver headings use Barlow Condensed at 24px and wten 500.
+- **Title / measurement:** the receiver frequency uses the title role with tabular numerals; it becomes 30px on mobile. Dossier frequency uses 28px and wten 500.
 - **Body:** dossier descriptions use the body role at every breakpoint. Profile descriptions use 12px on regular desktop and 13px on mobile, intermediate, and wide layouts.
 - **Labels:** receiving status uses the frontmatter label role. Other measurement labels range from 6–12px according to context; uppercase, restrained tracking, and small status dots distinguish telemetry from prose.
 
@@ -147,9 +147,9 @@ The narrow display face has the character of instrument lettering. Manrope gives
 
 ## Layout
 
-The observatory shell is centered with a 2000px maximum width. Regular desktop uses 48px outer gutters and a 100px header. The experience is a 650px-tall spatial field, with a central WebGL stage and an inset, 328px-wide dossier. The receiver and signal index share ruled horizontal boundaries; the index has eight equal columns.
+The observatory shell is centered with a 2000px maximum width. Regular desktop uses 48px outer gutters and a 100px header. The experience is a 650px-tall spatial field, with a central WebGL stage and an inset, 328px-wide dossier. The receiver and signal index share ruled horizontal boundaries; the index has five equal columns in two rows.
 
-- **Intermediate, 761–1200px:** gutters reduce to 28px, the dossier becomes 290px wide, and the signal index becomes four columns. The receiver retains a single horizontal grid with narrower heading and readout tracks.
+- **Intermediate, 761–1200px:** gutters reduce to 28px, the dossier becomes 290px wide, and the signal index retains five columns. The receiver retains a single horizontal grid with narrower heading and readout tracks.
 - **Mobile, up to 760px:** gutters are 22px. The 114px header keeps the signal-index link, audio and motion buttons, and résumé action visible. Profile, real 3D stage, caption, instruction, and dossier flow vertically. The scene is 400px tall and bleeds to the viewport edges; the dossier uses natural content height. The receiver becomes two columns and the index becomes two columns. Selecting a station brings its dossier into view; the selected-signal link reconnects the lower tuner to the dossier.
 - **Narrow mobile, up to 370px:** the profile and scene use 18px side insets, the header uses 15px, and the scene becomes 350px tall.
 - **Wide, from 1600px:** gutters increase to 65px, the experience to 720px, and the dossier to 360px.
@@ -178,7 +178,7 @@ The 3D vocabulary combines faceted polyhedra, concentric and tilted orbital ring
 
 ### Résumé and Icon Controls
 
-The mint résumé action stays visible from the first frame and opens the standalone HTML record. Its hover state lightens the surface and lifts it by 2px; its arrow shifts diagonally. Circular icon controls use ruled outlines, muted sage at rest, and mint with a darker green surface on hover. Pressed audio or motion state uses copper. Audio starts muted, and the motion button exposes pause and resume.
+The mint résumé action stays visible from the first frame and opens the standalone HTML record. Its hover state ligheights the surface and lifts it by 2px; its arrow shifts diagonally. Circular icon controls use ruled outlines, muted sage at rest, and mint with a darker green surface on hover. Pressed audio or motion state uses copper. Audio starts muted, and the motion button exposes pause and resume.
 
 Icon controls and the range input have 44px interaction dimensions. Mobile résumé and persistent record actions provide at least 44px height. Keyboard focus uses a 2px copper outline with 6px offset. Keep clear accessible labels and native link, button, and input semantics.
 
@@ -198,7 +198,7 @@ Receiving a different signal introduces the article over .42s with opacity, an 8
 
 ### Procedural Resonator
 
-Eight selectable nodes connect to a suspended proof core through curved carrier paths. Frequency changes damp the core and orbital rings into new positions; a locked node turns copper and its carrier carries a moving packet. Pointer drag orbits the camera, and pointer parallax stays restrained.
+Ten selectable nodes connect to a suspended proof core through curved carrier paths. Frequency changes damp the core and orbital rings into new positions; a locked node turns copper and its carrier carries a moving packet. Pointer drag orbits the camera, and pointer parallax stays restrained.
 
 Core tuning uses damping 4, orbital tuning 3.4, and camera orbit 5. Continuous rotation and drift accumulate a delta capped at .04s. Rendering changes from continuous to demand when the scene is hidden, offscreen, motion-paused, or reduced-motion. Reduced motion keeps a static 3D apparatus and immediate frequency state changes, removes the receive animation, and disables smooth scrolling. Store updates invalidate demand rendering so navigation remains independent of the render loop.
 

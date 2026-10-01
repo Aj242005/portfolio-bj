@@ -22,4 +22,5 @@ export interface Station {
   towerScale?: number;
   caseStudyUrl?: string;
   repoUrl?: string;
+  links?: { label: string; url: string }[];
 }

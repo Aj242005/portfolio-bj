@@ -261,5 +261,5 @@ export default function Scene() {
         <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.85, 0]}><planeGeometry args={[100, 100]} /><meshStandardMaterial color="#020a06" metalness={0.08} roughness={0.95} /></mesh>
         <PostProcessing />
       </Suspense>
-    </Canvas></SceneBoundary><span className="sr-only">Eight interconnected project nodes surround an orbiting proof core. Use the signal index or frequency tuner for keyboard navigation.</span></div>;
+    </Canvas></SceneBoundary><span className="sr-only">Interconnected project nodes surround an orbiting proof core. Use the signal index or frequency tuner for keyboard navigation.</span></div>;
 }

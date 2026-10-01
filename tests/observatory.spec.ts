@@ -30,18 +30,20 @@ test('orbit drag supports multiple full turns in both directions', async ({ page
     }
     expect(direction * rotation).toBeGreaterThan(4 * Math.PI);
   }
-  await page.locator('.station-preset').nth(5).click();
+  await page.locator('.station-preset').filter({ hasText: 'TRIAD' }).click();
   await expect(page.locator('.dossier h2')).toContainText('TRIAD');
   expect(errors).toEqual([]);
 });
 
 const stations = [
   ['88.5', 'Kambria', 'Immutable Credit'],
+  ['89.8', 'Namo Labs', 'Protocol-by-Protocol'],
   ['91.2', 'Digital South Trust', 'Public On-Chain'],
   ['94.0', 'Lokachakra', '10K+ Users'],
   ['96.8', 'PQC Research', '4 NIST Finalists'],
   ['99.6', 'Decomm', 'RISC Zero zkVM'],
   ['102.4', 'TRIAD', 'Sub-10ms Decisions'],
+  ['103.8', 'CODIT', 'SHAP'],
   ['105.2', 'ZK Vault', '5 Verified on Sepolia'],
   ['108.0', 'Origin', 'Algorand Semi-Finalist'],
 ];
@@ -98,7 +100,7 @@ test('mobile keeps real 3D, readable content and no overflow at narrow widths', 
     await expect(page.locator('canvas')).toBeVisible();
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     await expect(page.getByRole('link', { name: 'View résumé', exact: true })).toBeVisible();
-    await page.locator('.station-preset').nth(4).click();
+    await page.locator('.station-preset').filter({ hasText: 'Decomm' }).click();
     await expect(page.locator('.dossier h2')).toContainText('Decomm');
   }
 });
@@ -107,13 +109,38 @@ test('reduced motion and WebGL context loss preserve all navigation', async ({ p
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/');
   await expect(page.locator('canvas')).toBeVisible();
-  await page.locator('.station-preset').nth(5).click();
+  await page.locator('.station-preset').filter({ hasText: 'TRIAD' }).click();
   await expect(page.locator('.dossier h2')).toContainText('TRIAD');
   await page.locator('canvas').evaluate((canvas) => canvas.dispatchEvent(new Event('webglcontextlost', { cancelable: true })));
   await expect(page.getByRole('heading', { name: 'Your signals are still here.' })).toBeVisible();
-  await page.locator('.station-preset').nth(2).click();
+  await page.locator('.station-preset').filter({ hasText: 'Lokachakra' }).click();
   await expect(page.locator('.dossier h2')).toContainText('Lokachakra');
   await page.getByRole('slider').focus();
   await page.keyboard.press('End');
   await expect(page.locator('.dossier h2')).toContainText('Origin');
+});
+
+test('latest profile content and links are available in dossiers, resume and AI context', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('.station-preset')).toHaveCount(10);
+  await expect(page.locator('.profile-role')).toContainText('Namo Labs');
+  await page.locator('.station-preset').filter({ hasText: 'Namo Labs' }).click();
+  await expect(page.locator('.dossier-role')).toContainText('Research Associate');
+  await expect(page.locator('.dossier-period')).toContainText('August 2026');
+  await page.locator('.station-preset').filter({ hasText: 'CODIT' }).click();
+  await expect(page.locator('.dossier-description')).toContainText('Tree-sitter');
+  await expect(page.getByRole('link', { name: 'Visit project' })).toHaveAttribute('href', 'https://coditt.xyz/');
+  await page.locator('.station-preset').filter({ hasText: 'Origin' }).click();
+  await expect(page.locator('.dossier-description')).toContainText('Internal SIH Round Qualifier Team');
+  await expect(page.locator('.dossier-metrics')).toContainText('9.00/10');
+  await expect(page.getByRole('link', { name: 'Email Bhavya' })).toHaveAttribute('href', 'mailto:jbhavya876@gmail.com');
+  await expect(page.getByRole('link', { name: 'LinkedIn profile' })).toHaveAttribute('href', 'https://www.linkedin.com/in/bhavya-jain-394484284');
+  await page.goto('/resume.html');
+  for (const value of ['Namo Labs', 'CODIT', '244 KB', '5286065', '9.00/10', 'St. Andrews Scots', 'SIH', 'jbhavya876@gmail.com', '9350807198']) {
+    await expect(page.locator('body')).toContainText(value);
+  }
+  const response = await page.request.get('/llms.txt');
+  expect(response.status()).toBe(200);
+  const context = await response.text();
+  for (const value of ['Namo Labs', 'CODIT', '244 KB', '5286065', '9.00/10', 'St. Andrews Scots', 'SIH', 'Founder', 'jbhavya876@gmail.com']) expect(context).toContain(value);
 });

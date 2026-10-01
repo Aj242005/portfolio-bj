@@ -124,9 +124,11 @@ svg{flex-shrink:0}
 .index-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:19px}
 .index-heading h2{font-size:10px;font-weight:500}
 .index-heading>span{font-size:8px;color:var(--muted)}
-.station-grid{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.station-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
 .station-preset{padding:16px 15px;text-align:left;position:relative;border-right:1px solid var(--rule);min-width:0;transition:background .25s,color .25s}
 .station-preset:first-child{border-left:1px solid var(--rule)}
+.station-preset:nth-child(6){border-left:1px solid var(--rule)}
+.station-preset:nth-child(-n+5){border-bottom:1px solid var(--rule)}
 .station-preset:hover{background:#1c3223}
 .station-preset.is-selected{background:#203c2a}
 .station-preset.is-selected:before{position:absolute;content:'';top:-1px;left:0;right:0;height:2px;background:var(--mint)}
@@ -174,9 +176,7 @@ svg{flex-shrink:0}
  .scene-caption{left:37%}
  .receiver{grid-template-columns:220px 1fr 110px 76px;gap:18px}
  .receiver-readout{padding-left:13px}
- .station-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
- .station-preset:nth-child(5){border-left:1px solid var(--rule)}
- .station-preset:nth-child(-n+4){border-bottom:1px solid var(--rule)}
+ .station-grid{grid-template-columns:repeat(5,minmax(0,1fr))}
  .station-preset strong{min-height:0}
 }
 @media(max-width:760px){
@@ -231,7 +231,7 @@ svg{flex-shrink:0}
  .station-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
  .station-preset{padding:17px 14px}
  .station-preset:nth-child(odd){border-left:1px solid var(--rule)}
- .station-preset:nth-child(-n+6){border-bottom:1px solid var(--rule)}
+ .station-preset:nth-child(-n+8){border-bottom:1px solid var(--rule)}
  .station-preset strong{font-size:11px;min-height:0;margin:12px 0}
  .preset-bottom{font-size:8px}
  .site-footer{margin:0 22px;padding:20px 0 25px;flex-wrap:wrap;gap:18px;font-size:8px}
