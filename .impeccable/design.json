@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-01T15:31:07.670Z",
+  "title": "Design System: The Signal ? Cryptographic Observatory",
+  "extensions": {
+    "colorMeta": {
+      "bg": {
+        "role": "neutral",
+        "displayName": "Deep mineral green"
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Instrument surface"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Pale mineral ink"
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted sage"
+      },
+      "mint": {
+        "role": "primary",
+        "displayName": "Pale mint"
+      },
+      "accent": {
+        "role": "secondary",
+        "displayName": "Copper"
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Ruled green"
+      },
+      "scene-mint": {
+        "role": "primary",
+        "displayName": "Scene mint"
+      }
+    },
+    "shadows": [
+      {
+        "name": "dossier",
+        "value": "0 16px 40px #020b0638",
+        "purpose": "Structural depth beneath the evidence reader."
+      },
+      {
+        "name": "dialog",
+        "value": "0 30px 100px #0009",
+        "purpose": "Native about-dialog separation."
+      },
+      {
+        "name": "frequency-needle",
+        "value": "0 3px 9px #eaa57c40",
+        "purpose": "Localized glow on the WebKit range thumb."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Shared UI easing."
+      },
+      {
+        "name": "receive",
+        "value": "0.42s",
+        "purpose": "Article arrival: opacity .6 to 1, translateY 8px to 0, blur 2px to 0."
+      },
+      {
+        "name": "hover",
+        "value": "0.2s",
+        "purpose": "Control colors and record hover surface."
+      },
+      {
+        "name": "core-damping",
+        "value": "4",
+        "purpose": "Three.MathUtils.damp frequency response."
+      },
+      {
+        "name": "orbital-damping",
+        "value": "3.4",
+        "purpose": "Three.MathUtils.damp ring tuning response."
+      },
+      {
+        "name": "camera-damping",
+        "value": "5",
+        "purpose": "Three.MathUtils.damp drag-to-orbit response."
+      },
+      {
+        "name": "delta-cap",
+        "value": "0.04s",
+        "purpose": "Maximum delta accumulated by continuous drift and carrier packet motion."
+      },
+      {
+        "name": "render-policy",
+        "value": "always | demand",
+        "purpose": "Demand when hidden, offscreen, motion-paused, or reduced-motion; store changes invalidate the scene."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "0.01ms",
+        "purpose": "CSS transitions and decorative animations collapse; dossier animation is removed and scrolling is immediate."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "narrow-mobile",
+        "value": "370px"
+      },
+      {
+        "name": "mobile",
+        "value": "760px"
+      },
+      {
+        "name": "intermediate",
+        "value": "1200px"
+      },
+      {
+        "name": "wide",
+        "value": "1600px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "R?sum? Link",
+      "kind": "button",
+      "refersTo": "resume-link",
+      "description": "Always-visible mint action to the standalone HTML r?sum?.",
+      "html": "<a class=\"ds-resume\" href=\"/resume.html\" target=\"_blank\" rel=\"noopener noreferrer\">View r?sum? <svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a>",
+      "css": ".ds-resume{display:inline-flex;gap:23px;align-items:center;background:var(--mint,#b0e9cb);color:#10251a;padding:13px 19px;border-radius:4px;font:700 11px var(--body,Manrope,sans-serif);text-decoration:none;transition:background .2s,transform .3s var(--ease,cubic-bezier(.16,1,.3,1))}.ds-resume:hover{background:#d0ffde;transform:translateY(-2px)}.ds-resume svg{transition:transform .3s var(--ease,cubic-bezier(.16,1,.3,1))}.ds-resume:hover svg{transform:translate(2px,-2px)}.ds-resume:focus-visible{outline:2px solid var(--accent,#eaa57c);outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-resume,.ds-resume svg{transition-duration:.01ms}}"
+    },
+    {
+      "name": "Motion Control",
+      "kind": "button",
+      "refersTo": "icon-button",
+      "description": "Circular 44px button for pausing or resuming scene motion.",
+      "html": "<button class=\"ds-icon\" aria-label=\"Pause motion\" aria-pressed=\"false\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"14\" y=\"4\" width=\"4\" height=\"16\" rx=\"1\"/><rect x=\"6\" y=\"4\" width=\"4\" height=\"16\" rx=\"1\"/></svg></button>",
+      "css": ".ds-icon{width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--rule,#30473a);border-radius:50%;color:var(--muted,#9fb4a6);background:none;cursor:pointer;transition:color .2s,background .2s,border-color .2s,transform .2s var(--ease,cubic-bezier(.16,1,.3,1))}.ds-icon:hover{color:var(--mint,#b0e9cb);background:#223b2b;border-color:#5f7c66;transform:translateY(-2px)}.ds-icon[aria-pressed=true]{color:var(--accent,#eaa57c)}.ds-icon:focus-visible{outline:2px solid var(--accent,#eaa57c);outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-icon{transition-duration:.01ms}}"
+    },
+    {
+      "name": "Frequency Range",
+      "kind": "input",
+      "refersTo": "frequency-input",
+      "description": "Native keyboard and touch tuning with a copper needle and ruled scale.",
+      "html": "<div class=\"ds-track\"><div class=\"ds-ticks\" aria-hidden=\"true\"></div><input type=\"range\" min=\"88\" max=\"108\" step=\"0.1\" value=\"88.5\" aria-label=\"Tune signal frequency\" aria-valuetext=\"88.5 MHz, Kambria ? KAT Tokenomics\"/></div>",
+      "css": ".ds-track{position:relative;height:30px;margin-top:6px;width:100%}.ds-ticks{height:14px;margin-top:9px;background:repeating-linear-gradient(90deg,#49604d 0,#49604d 1px,transparent 1px,transparent 2.5%);border-bottom:1px solid #49604d;pointer-events:none}.ds-track input{position:absolute;left:-7px;top:-9px;width:calc(100% + 14px);height:44px;margin:0;appearance:none;-webkit-appearance:none;background:transparent;cursor:ew-resize;z-index:2}.ds-track input::-webkit-slider-runnable-track{background:transparent;height:24px}.ds-track input::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:2px;height:24px;background:var(--accent,#eaa57c);border:0;border-radius:0;box-shadow:0 3px 9px #eaa57c40}.ds-track input::-moz-range-track{background:transparent;height:24px}.ds-track input::-moz-range-thumb{width:2px;height:24px;background:var(--accent,#eaa57c);border:0;border-radius:0}.ds-track input:focus-visible{outline:2px solid var(--accent,#eaa57c);outline-offset:6px}"
+    },
+    {
+      "name": "Selected Signal Preset",
+      "kind": "nav",
+      "refersTo": "station-preset-selected",
+      "description": "Ruled index navigation with a mint top rule and selected indicator.",
+      "html": "<button class=\"ds-preset\" aria-pressed=\"true\"><span class=\"ds-preset-top\"><span>88.5<small>MHz</small></span><i></i></span><strong>Kambria</strong><span class=\"ds-preset-bottom\">Experience<span>01</span></span></button>",
+      "css": ".ds-preset{padding:16px 15px;text-align:left;position:relative;border:1px solid var(--rule,#30473a);min-width:0;background:none;color:var(--ink,#e2eee5);font-family:var(--body,Manrope,sans-serif);cursor:pointer;transition:background .25s,color .25s}.ds-preset:hover{background:#1c3223}.ds-preset[aria-pressed=true]{background:#203c2a}.ds-preset[aria-pressed=true]:before{position:absolute;content:\"\";top:-1px;left:0;right:0;height:2px;background:var(--mint,#b0e9cb)}.ds-preset-top{display:flex;justify-content:space-between;align-items:center;font-variant-numeric:tabular-nums;font-size:12px;color:var(--mint,#b0e9cb)}.ds-preset-top small{font-size:7px;padding-left:5px;color:var(--muted,#9fb4a6)}.ds-preset-top i{height:5px;width:5px;border-radius:50%;background:var(--mint,#b0e9cb)}.ds-preset strong{display:block;font-size:10px;line-height:1.5;font-weight:600;margin:14px 0 12px;min-height:30px}.ds-preset-bottom{font-size:7px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted,#9fb4a6);display:flex;justify-content:space-between;gap:3px}.ds-preset-bottom>span{color:#839d87;font-variant-numeric:tabular-nums}.ds-preset:focus-visible{outline:2px solid var(--accent,#eaa57c);outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-preset{transition-duration:.01ms}}"
+    },
+    {
+      "name": "Signal Dossier",
+      "kind": "card",
+      "refersTo": "dossier",
+      "description": "Ruled evidence container with independent reading area and persistent record link.",
+      "html": "<aside class=\"ds-dossier\" aria-label=\"Selected signal details\"><div class=\"ds-status\">RECEIVING TRANSMISSION</div><span class=\"ds-scroll\">Scroll for technologies and details</span><article class=\"ds-content\"><div class=\"ds-frequency\">88.5 <small>MHz</small></div><h2>Kambria ? KAT Tokenomics</h2></article><a class=\"ds-record\" href=\"/resume.html\" target=\"_blank\" rel=\"noopener noreferrer\">Full engineering record <svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></a></aside>",
+      "css": ".ds-dossier{width:328px;max-width:100%;background:var(--surface,#10241b);color:var(--ink,#e2eee5);box-shadow:0 16px 40px #020b0638;display:flex;flex-direction:column;border-radius:4px;overflow:hidden;font-family:var(--body,Manrope,sans-serif)}.ds-status{padding:19px 23px;border-bottom:1px solid var(--rule,#30473a);font-size:8px;letter-spacing:.09em;color:var(--muted,#9fb4a6)}.ds-scroll{display:block;padding:9px 23px 0;font-size:9px;color:var(--muted,#9fb4a6)}.ds-content{padding:23px 23px 17px;overflow:auto;flex:1;min-height:0}.ds-frequency{margin-bottom:13px;color:var(--accent,#eaa57c);font-family:var(--display,\"Barlow Condensed\",sans-serif);font-size:28px;font-weight:500;font-variant-numeric:tabular-nums}.ds-frequency small{font-size:12px;font-family:var(--body,Manrope,sans-serif)}.ds-dossier h2{margin:0;font-family:var(--display,\"Barlow Condensed\",sans-serif);font-size:29px;line-height:1.12;font-weight:500}.ds-record{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:44px;padding:12px 23px;font-size:10px;color:var(--mint,#b0e9cb);border-top:1px solid var(--rule,#30473a);flex-shrink:0;text-decoration:none;transition:background .2s}.ds-record:hover{background:#1e3828}.ds-record:focus-visible{outline:2px solid var(--accent,#eaa57c);outline-offset:6px}@media(prefers-reduced-motion:reduce){.ds-record{transition-duration:.01ms}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Cryptographic Observatory",
+    "overview": "The Signal presents engineering work as connected frequencies around a suspended proof core. Deep mineral green, dark machined alloy, pale mint illumination, and copper measurement details create a nocturnal observatory. Radio roots remain in the resonator, carrier paths, tuning rail, callsigns, and signal-lock feedback.\n\nThe apparatus is the expressive artifact; surrounding typography makes the evidence easy to read. Condensed instrument lettering establishes hierarchy, while calm humanist paragraphs and ruled metrics carry the candidate's supplied record. Navigation and résumé access remain usable throughout scene loading or rendering failure.",
+    "keyCharacteristics": [
+      "Procedural orbital geometry, faceted core, and eight connected signal nodes.",
+      "Mineral green surfaces with mint illumination and copper frequency feedback.",
+      "Condensed display lettering paired with readable humanist text.",
+      "Ruled evidence panels and restrained controls.",
+      "Damped motion with native keyboard and touch alternatives."
+    ],
+    "rules": [
+      {
+        "name": "The Signal Feedback Rule",
+        "body": "Mint communicates illumination and locked UI state; copper communicates frequency and the active carrier. Keep these assignments legible in both the scene and the surrounding controls.",
+        "section": "colors"
+      },
+      {
+        "name": "The Evidence Reading Rule",
+        "body": "Keep dossier paragraphs at 14px with 1.8 line-height across all breakpoints. Condensed type belongs to titles and measurements, not long descriptions.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "**Do** preserve the mineral green, mint, copper, and machined-alloy observatory identity.",
+      "**Do** keep frequency and carrier feedback consistent between WebGL and native controls.",
+      "**Do** keep dossier paragraphs at 14px and primary touch controls at least 44px.",
+      "**Do** keep the résumé visible from the first frame and the engineering record outside the desktop scroll area.",
+      "**Do** preserve native keyboard navigation, reduced-motion behavior, and hidden or offscreen rendering pauses.",
+      "**Do** retain supplied evidence and render optional destinations only when supplied."
+    ],
+    "donts": [
+      "**Don't** reintroduce the replaced vintage radio cabinet, wood, grille cloth, vacuum tubes, or typewriter fonts.",
+      "**Don't** make evidence or résumé access depend on WebGL, sound, or animation completion.",
+      "**Don't** shrink dossier reading copy to the telemetry label scale.",
+      "**Don't** invent employers, metrics, credentials, project destinations, or a new tonal token scale."
+    ]
+  }
+}

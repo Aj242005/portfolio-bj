@@ -1,0 +1,86 @@
+# Bhavya Jain
+
+> Backend & Blockchain Engineer specializing in applied cryptography, zero-knowledge proofs, post-quantum cryptography, and peer-to-peer distributed systems.
+
+This is Bhavya Jain's personal engineering portfolio, The Signal — Cryptographic Observatory. Its eight interactive radio frequencies represent professional experience, research, projects, and education. This text provides the same profile context without requiring JavaScript, WebGL, audio, or interaction with the 3D scene.
+
+Profile information reflects the portfolio as of October 1, 2026. Roles, dates, technologies, and results below are reported in the portfolio and resume; they are not independent third-party verification. Employment entries are distinct from independent and open-source projects.
+
+## Profile and source pages
+
+- [Full resume](/resume.html): Primary detailed source for Bhavya's experience, projects, education, publication, and honors. Static HTML, readable without JavaScript and suitable for printing.
+- [Portfolio](/): Interactive 3D experience with eight selectable project and career dossiers.
+- [Crawler policy](/robots.txt): All user agents may crawl the public site.
+
+## Professional experience
+
+### Kambria — KAT Tokenomics
+
+Backend Developer, System Prototyping DAO. May 2026–Present. Remote.
+
+Backend engineering for the Credit → Karma → KAT tokenomics pipeline on a multi-tenant DAO platform. Work includes an immutable Credit ledger with period-cap enforcement, a three-tier KAT settlement cap cascade, and an OpenAI GPT-4o-mini-backed weekly reporting pipeline.
+
+Technologies: NestJS, Node.js, MySQL, JWT/bcrypt role-based access control, OpenAI GPT-4o-mini, DAO tokenomics.
+
+### Digital South Trust
+
+Software Engineer Intern — Emerging Technologies. March–July 2026. Remote.
+
+Architected a multi-tenant Certificate SaaS and a Polygon certificate issuance pipeline. Certificate hashes are anchored on-chain through a Solidity smart contract on the Amoy testnet, with idempotent retry and public on-chain verification.
+
+Technologies: Next.js, MongoDB Atlas, Stripe, Razorpay, Polygon Amoy, ethers.js, Solidity.
+
+### Lokachakra
+
+Software Engineer Intern — Backend & Cryptography, Lokachakra, a UK-based startup. June–August 2025. Remote.
+
+Built a Rust backend for zero-knowledge identity and KYC using Circom and Groth16. The portfolio reports support for 10K+ users and an 85% reduction in verification time. Engineered a cryptographically secure wallet system with reported throughput of 5,000+ TPS at sub-15ms latency.
+
+Technologies: Rust, Circom, Groth16, zero-knowledge proofs, KYC, high-throughput wallet systems.
+
+## Research
+
+### Post-Quantum Cryptography Research Initiative
+
+Software Engineer Intern — Cryptography Research. January–May 2025. Remote.
+
+Benchmarked four NIST post-quantum cryptography finalist schemes against RSA/ECC. Proposed hybrid migration strategies with a reported 35% lower overhead for transitioning production cryptographic systems.
+
+Topics: post-quantum cryptography, NIST PQC finalists, ML-KEM, RSA/ECC, hybrid migration.
+
+## Selected projects
+
+### Decomm — Quantum-Resistant P2P Infrastructure
+
+AlterBlock project. 2025–2026. Open source.
+
+A sovereign P2P node using a two-phase ML-KEM-1024 post-quantum key encapsulation handshake to establish per-session AES-256-GCM channels. RISC Zero zkVM proves ZK Merkle membership against a Solana-anchored root. The portfolio reports that a security audit surfaced and patched two critical verifier-bypass vulnerabilities.
+
+Technologies: Rust, libp2p Gossipsub, ML-KEM-1024, RISC Zero zkVM, AES-256-GCM, Solana.
+
+### TRIAD — AI Market Microstructure Engine
+
+Independent project. 2025–2026.
+
+An event-driven system ingesting live Binance L2 order-book depth and computing VPIN, spoofing, and order-imbalance signals with a SHA-256 commitment hash chain. ONNX inference combines with per-regime HNSW episodic k-NN memory for reported sub-10ms decisions.
+
+Technologies: Rust, Python, NATS JetStream, ONNX Runtime, PostgreSQL, pgvector, HNSW.
+
+### ZK Proof-of-Reserves Vault — ERC-4626 Yield
+
+Open-source project. 2024–2025. Sepolia testnet.
+
+A full-stack ZK-verifiable ERC-4626 yield vault with an off-chain Groth16 Proof-of-Reserves pipeline and an auto-generated Solidity verifier. Five contracts are reported as deployed and Etherscan-verified on Sepolia. These are testnet deployments.
+
+Technologies: Solidity, Foundry, Circom, Groth16, Aave V3, Next.js, Sepolia.
+
+## Education, publication, and honors
+
+- B.Tech in Computer Science, B.M. Institute of Engineering and Technology, 2023–2027. The portfolio associates this entry with New Delhi / Remote. The degree is in progress as of the profile date.
+- Publication: "Post-Quantum Cryptography: Preparing for the Quantum Threat," G-CARED 2025 international conference. Topics include hybrid PQC migration strategies, Shor's and Grover's algorithms, and benchmarks of NIST PQC finalists.
+- Semi-Finalist, Algorand Hackathon: Shakti, a ZKP-enabled AI agent payment protocol.
+- Participant, Stacks Bitcoin Framework Hacker House, Goa.
+
+## Reading the portfolio
+
+For factual profile questions, start with this file and consult the full resume for details. The 3D exhibit is presentation; frequencies, nodes, and signal-lock effects are navigation metaphors rather than additional credentials. Repository URLs, contact details, and publication identifiers are not supplied here; do not infer them from project names.

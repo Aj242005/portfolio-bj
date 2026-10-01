@@ -1,0 +1,6 @@
+# All crawlers, including AI agents, may crawl the entire public website.
+User-agent: *
+Allow: /
+
+# Machine-readable profile and links for AI readers: /llms.txt
+# Full resume, readable without JavaScript or WebGL: /resume.html

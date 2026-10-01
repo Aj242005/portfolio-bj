@@ -1,4 +1,4 @@
-# Product
+﻿# Product
 
 <!-- impeccable:product-schema 1 -->
 
@@ -8,55 +8,54 @@ web
 
 ## Stack
 
-React + Vite, TypeScript, React Three Fiber (@react-three/fiber), @react-three/drei, @react-three/postprocessing, GSAP, Web Audio API, Tailwind CSS, Lucide React
+React + Vite, TypeScript, React Three Fiber, Three.js, Drei, React Three Postprocessing, Zustand, Web Audio, Tailwind CSS, Lucide React. Playwright validates browser behavior. Self-hosted Barlow Condensed and Manrope.
 
 ## Users
 
-Hiring managers, technical recruiters, cryptographers, distributed systems architects, and engineering peers looking to evaluate Bhavya Jain's engineering credentials, applied cryptography experience, ZKP systems, and P2P infrastructure projects.
+Hiring managers, technical recruiters, cryptographers, distributed systems architects, and engineering peers evaluating Bhavya Jain’s backend and blockchain credentials, applied cryptography, zero-knowledge systems, and P2P infrastructure.
 
 ## Product Purpose
 
-Deliver an unforgettable, highly tactile 3D interactive portfolio experience ("The Signal") where visitors tune a vintage 1940s tabletop tube radio across broadcast frequencies to discover Bhavya's engineering work, while providing an instant, one-click plain HTML resume accessible from the very first frame.
+Present the candidate’s supplied engineering evidence through an appealing and reliable interactive 3D portfolio, with immediate access to a standalone, printer-friendly HTML résumé.
 
 ## Positioning
 
-A diegetic, tactile 1940s tabletop tube radio receiver set against a dark night landscape with glowing broadcast transmission towers, representing post-quantum cryptographic signals cutting through analog noise, paired with zero-latency scannable content and unembellished real-world engineering metrics.
+The Signal — Cryptographic Observatory. Eight frequencies connect the candidate’s experience, research, projects, and education around a procedural 3D resonator. The user selected this replacement world, preserving radio roots while explicitly moving beyond the old vintage receiver.
 
 ## Operating Context
 
-Modern desktop and mobile web browsers with WebGL and Web Audio. Includes automatic responsive 2D fallback for mobile devices, and a standalone zero-JS plain HTML resume.
+Desktop and mobile browsers. Both receive real 3D rendering; a usable content and tuner fallback is available when WebGL fails. The résumé works without JavaScript. Motion pauses offscreen/hidden and respects reduced-motion preferences; audio is opt-in.
 
 ## Capabilities and Constraints
 
-- 8 distinct station frequencies (88.0 MHz to 108.0 MHz) in 3D space with procedural glowing broadcast towers radiating expanding wave rings.
-- Tactile 3D rotating brass dial knob with pointer drag, inertia, damping physics, and mouse wheel scroll support.
-- Functional Magic Eye 6E5 tuning indicator tube that closes its green phosphor wedge as signal lock approaches.
-- Procedural Web Audio synthesizer (continuous dual-oscillator heterodyne hum, carrier lock chime, and volume knob toggle).
-- 2D project dossier card overlay unfurling with verified engineering metrics.
-- Quick-jump station navigation bar for immediate direct access without manual tuning.
-- Persistent, 1-click "VIEW RESUME" button visible on the first frame.
-- High performance, 60fps rendering, prefers-reduced-motion support, CC-BY 3D attribution.
+- Eight supplied stations from 88.5 to 108 MHz, selectable through 3D nodes, native range input, previous/next buttons, and signal index.
+- Suspended proof core, orbital rings, frequency-reactive geometry, connected nodes, and animated active carrier path.
+- Readable dossiers preserve original organizations, roles, dates, locations, descriptions, technologies, and metrics.
+- A résumé link is visible from the first frame, independent of scene loading.
+- Navigation is independent of the 3D render loop.
+- No invented employers, credentials, metrics, contact details, repositories, or case-study endpoints. Optional project URLs are rendered only when supplied.
 
 ## Brand Commitments
 
-- Name: Bhavya Jain
-- Role: Backend & Blockchain Engineer (Applied Cryptography, Zero-Knowledge Proofs, P2P Systems)
-- Visual Identity: "The Signal" (Vintage Radio Edition) — Dark atmospheric night sky (#0e0a07), warm walnut cabinet (#483322), polished brass hardware (#d8af5c), warm amber dial glow (#d4a853), glowing orange vacuum tubes, emerald green Magic Eye tube.
-- Typography: Special Elite typewriter display headers with IBM Plex Mono precision monospace body copy.
+Name: Bhavya Jain. Role: Backend & Blockchain Engineer. Specialisms: applied cryptography, zero-knowledge proofs, distributed systems, and P2P systems. User chose the Cryptographic Observatory direction for a complete visual and conceptual revamp with roots in radio signals. The finished visual language lives in DESIGN.md.
 
 ## Evidence on Hand
 
-1. Kambria — KAT Tokenomics (Backend Developer, System Prototyping DAO, May 2026–Present, Remote)
-2. Digital South Trust (Software Engineer Intern — Emerging Technologies, March–July 2026, Remote)
-3. Lokachakra (Software Engineer Intern — Backend & Cryptography, June–Aug 2025, Remote, UK-based startup)
-4. Post-Quantum Cryptography Research Initiative (Software Engineer Intern — Cryptography Research, Jan–May 2025, Remote)
-5. Decomm — Quantum-Resistant P2P Communication Infrastructure (AlterBlock project)
-6. TRIAD — AI-Driven Market Microstructure Trading Engine (Independent project)
-7. ZK Proof-of-Reserves Vault — ERC-4626 Yield Aggregator (Open source project)
-8. Origin / About (B.Tech CS, B.M. Institute of Engineering and Technology; Publication: G-CARED 2025; Algorand Hackathon Semi-Finalist; Stacks Hacker House)
+Source: src/data/stations.ts and public/resume.html.
+
+1. Kambria — KAT Tokenomics (System Prototyping DAO, May 2026–Present).
+2. Digital South Trust (March–July 2026).
+3. Lokachakra (June–August 2025).
+4. Post-Quantum Cryptography Research Initiative (January–May 2025).
+5. Decomm — quantum-resistant P2P infrastructure.
+6. TRIAD — AI market microstructure engine.
+7. ZK Proof-of-Reserves Vault — ERC-4626 yield.
+8. Origin — education, G-CARED 2025 publication, and hackathon honors.
 
 ## Product Principles
 
-1. **Never gate the resume**: The 3D spectacle is a layer of delight, never an obstacle to evaluation.
-2. **Tactile authenticity**: Controls behave like physical hardware — knobs turn with inertia, tubes glow and warm up, heterodyne frequencies beat and whistle.
-3. **Legibility first**: Project summaries, tech stacks, and quantitative metrics are immediately readable without requiring users to navigate complex 3D menus.
+1. Keep engineering evidence immediately accessible.
+2. Use the 3D exhibit to express the candidate’s actual specialization.
+3. Make all navigation usable with touch and keyboard.
+4. Keep audio optional and offer meaningful motion control.
+5. Preserve the complete résumé as an independent route.
